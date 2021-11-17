@@ -225,7 +225,7 @@ ifeq ($(strip $(USE_PETSC)), TRUE)
 endif
 
 # Set MOAB info if it is being used
-ifeq ($(strip $(USE_MOAB)), TRUE)
+ifeq ($(COMP_INTERFACE), moab)
   ifdef MOAB_PATH
     CPPDEFS += -DHAVE_MOAB
     ifndef INC_MOAB
